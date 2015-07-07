@@ -1,8 +1,8 @@
-gradle-rxjava-project-plugin
+gradle-nebula-plugin-reactivesocket
 ==============
 
-This plugin is to support projects in the ReactiveX org (and it isn't meant to be used elsewhere). It is at its essence
-just a combination of other plugins that are common to all ReactiveX projects, with some additional configuration. The 
+This plugin is to support projects in the ReactiveSocket org (and it isn't meant to be used elsewhere). It is at its essence
+just a combination of other plugins that are common to all ReactiveSocket projects, with some additional configuration. The 
 primary responsibilities to:
 
   * Provide release process
@@ -33,11 +33,11 @@ To include, add the following to your build.gradle
 
     buildscript {
       repositories { jcenter() }
-      dependencies { classpath 'com.netflix.nebula:gradle-rxjava-project-plugin:1.12.+' }
+      dependencies { classpath 'com.netflix.nebula:gradle-nebula-plugin-reactivesocket:1.12.+' }
     }
 
     allprojects {
-        apply plugin: 'rxjava-project'
+        apply plugin: 'reactivesocket-project'
     }
 
 # Parameters

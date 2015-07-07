@@ -7,13 +7,13 @@ buildscript {
     dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:2.+' }
 }
 
-description 'Template for RxJava projects'
+description 'Template for ReactiveSocket projects'
 apply plugin: 'nebula-plugin'
 
 contacts {
-    'justin@halfempty.org' {
-        moniker 'Justin Ryan'
-        github 'quidryan'
+    'benjchristensen@gmail.com' {
+        moniker 'Ben Christensen'
+        github 'benjchristensen'
     }
 }
 
