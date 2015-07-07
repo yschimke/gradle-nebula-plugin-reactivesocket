@@ -17,7 +17,7 @@ import org.gradle.api.publish.maven.MavenPublication
 /**
  * Leverage license plugin to show missing headers, and inject license into the POM
  */
-class RxjavaLicensePlugin  implements Plugin<Project> {
+class ReactiveSocketLicensePlugin  implements Plugin<Project> {
 
     Project project
     File header

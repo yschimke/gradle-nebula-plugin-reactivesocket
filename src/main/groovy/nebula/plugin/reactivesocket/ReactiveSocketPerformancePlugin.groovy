@@ -15,7 +15,7 @@ import org.gradle.api.tasks.JavaExec
 /**
  * Establish JMH
  */
-class RxjavaPerformancePlugin implements Plugin<Project> {
+class ReactiveSocketPerformancePlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {

@@ -22,7 +22,7 @@ import spock.lang.Ignore
 import java.util.jar.Attributes
 import java.util.jar.JarFile
 
-class RxjavaProjectPluginLauncherSpec extends IntegrationSpec {
+class ReactiveSocketProjectPluginLauncherSpec extends IntegrationSpec {
 
     Grgit originGit
 
@@ -33,7 +33,7 @@ class RxjavaProjectPluginLauncherSpec extends IntegrationSpec {
         createFile('src/perf/java/Perf.java') << 'public class Perf {}'
 
         buildFile << """
-            ${applyPlugin(RxjavaProjectPlugin)}
+            ${applyPlugin(ReactiveSocketProjectPlugin)}
             apply plugin: 'java'
             license {
                 ignoreFailures = true
@@ -81,7 +81,7 @@ class RxjavaProjectPluginLauncherSpec extends IntegrationSpec {
 
         result.wasExecuted(':javadoc')
         fileExists('build/docs/javadoc/index.html')
-        new File(projectDir, 'build/docs/javadoc/index.html').text.contains("<title>RxJava Javadoc ${snapshotVer}</title>")
+        new File(projectDir, 'build/docs/javadoc/index.html').text.contains("<title>ReactiveSocket Javadoc ${snapshotVer}</title>")
         def jmhManifest = getManifest("build/libs/stand-it-all-up-${snapshotVer}-benchmarks.jar")
         jmhManifest['Main-Class'] == 'org.openjdk.jmh.Main'
     }

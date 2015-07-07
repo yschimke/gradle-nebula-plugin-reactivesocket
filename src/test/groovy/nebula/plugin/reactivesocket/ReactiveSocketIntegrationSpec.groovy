@@ -21,7 +21,7 @@ import spock.lang.Ignore
 import java.util.jar.Attributes
 import java.util.jar.JarFile
 
-abstract class RxJavaIntegrationSpec extends IntegrationSpec {
+abstract class ReactiveSocketIntegrationSpec extends IntegrationSpec {
 
     @Ignore
     def Map<String,String> getManifest(String jarPath) {

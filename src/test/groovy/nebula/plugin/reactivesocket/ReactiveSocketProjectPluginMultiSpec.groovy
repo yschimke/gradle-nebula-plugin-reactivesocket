@@ -17,7 +17,7 @@ package nebula.plugin.reactivesocket
 
 import org.ajoberstar.grgit.Grgit
 
-class RxjavaProjectPluginMultiSpec extends RxJavaIntegrationSpec {
+class ReactiveSocketProjectPluginMultiSpec extends ReactiveSocketIntegrationSpec {
 
     Grgit originGit
 
@@ -25,7 +25,7 @@ class RxjavaProjectPluginMultiSpec extends RxJavaIntegrationSpec {
 
     def setup() {
         def subBuildFile = """
-            ${applyPlugin(RxjavaProjectPlugin)}
+            ${applyPlugin(ReactiveSocketProjectPlugin)}
             apply plugin: 'java'
             license {
                 ignoreFailures = true
@@ -42,7 +42,7 @@ class RxjavaProjectPluginMultiSpec extends RxJavaIntegrationSpec {
 
         createFile('gradle.properties') << 'version=1.0.0-SNAPSHOT'
         buildFile << """
-            ${applyPlugin(RxjavaProjectPlugin)}
+            ${applyPlugin(ReactiveSocketProjectPlugin)}
         """.stripIndent()
 
         new File(projectDir, '.gitignore') << """

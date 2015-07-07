@@ -10,7 +10,7 @@ import org.gradle.api.tasks.bundling.Jar
 /**
  * Apply OSGI specific fields
  */
-class RxjavaOsgiPlugin implements Plugin<Project> {
+class ReactiveSocketOsgiPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
@@ -27,7 +27,7 @@ class RxjavaOsgiPlugin implements Plugin<Project> {
 
                     manifest.name = project.name
                     manifest.instruction 'Bundle-Vendor', 'ReactiveX'
-                    manifest.instruction 'Bundle-DocURL', 'https://github.com/ReactiveX/RxJava'
+                    manifest.instruction 'Bundle-DocURL', 'https://github.com/ReactiveX/ReactiveSocket'
 
                     // Legacy from what we had test in the compile classpath
                     manifest.instruction 'Import-Package', '!org.junit,!junit.framework,!org.mockito.*,*'

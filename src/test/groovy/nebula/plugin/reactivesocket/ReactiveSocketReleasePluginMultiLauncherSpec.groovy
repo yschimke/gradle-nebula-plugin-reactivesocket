@@ -5,7 +5,7 @@ import org.ajoberstar.grgit.Grgit
 import org.ajoberstar.grgit.Tag
 import spock.lang.Ignore
 
-class RxJavaReleasePluginMultiLauncherSpec extends RxJavaIntegrationSpec {
+class ReactiveSocketReleasePluginMultiLauncherSpec extends ReactiveSocketIntegrationSpec {
 
     Grgit grgit
     Grgit originGit
@@ -39,7 +39,7 @@ class RxJavaReleasePluginMultiLauncherSpec extends RxJavaIntegrationSpec {
             ext.dryRun = true
             group = 'test'
             allprojects {
-                ${applyPlugin(RxjavaProjectPlugin)}
+                ${applyPlugin(ReactiveSocketProjectPlugin)}
             }
             prepare.doFirst {
                 println version.toString()

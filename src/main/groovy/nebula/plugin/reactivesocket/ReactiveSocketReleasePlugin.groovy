@@ -9,7 +9,7 @@ import org.gradle.api.Project
 import org.gradle.api.Task
 import org.gradle.api.execution.TaskExecutionGraph
 
-class RxJavaReleasePlugin  implements Plugin<Project> {
+class ReactiveSocketReleasePlugin  implements Plugin<Project> {
     static final String TRAVIS_CI = 'release.travisci'
     Project project
 

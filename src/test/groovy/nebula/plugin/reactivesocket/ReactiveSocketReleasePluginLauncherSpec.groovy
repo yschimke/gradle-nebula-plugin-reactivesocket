@@ -9,7 +9,7 @@ import org.ajoberstar.grgit.operation.BranchAddOp
 import org.gradle.api.plugins.JavaPlugin
 import spock.lang.Ignore
 
-class RxJavaReleasePluginLauncherSpec extends IntegrationSpec {
+class ReactiveSocketReleasePluginLauncherSpec extends IntegrationSpec {
 
     Grgit grgit
     Grgit originGit
@@ -40,8 +40,8 @@ class RxJavaReleasePluginLauncherSpec extends IntegrationSpec {
             ext.dryRun = true
             group = 'test'
             ${applyPlugin(NebulaMavenPublishingPlugin)}
-            ${applyPlugin(RxJavaPublishingPlugin)}
-            ${applyPlugin(RxJavaReleasePlugin)}
+            ${applyPlugin(ReactiveSocketPublishingPlugin)}
+            ${applyPlugin(ReactiveSocketReleasePlugin)}
             ${applyPlugin(JavaPlugin)}
 
             task printVersion << {

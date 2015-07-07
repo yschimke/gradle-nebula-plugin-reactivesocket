@@ -5,10 +5,10 @@ import spock.lang.Specification
 /**
  * Created by jryan on 7/10/14.
  */
-class RxJavaPublishingPluginSpec extends Specification {
+class ReactiveSocketPublishingPluginSpec extends Specification {
     def 'testCalculateUrlFromOrigin'(String origin, String uri) {
         expect:
-        RxJavaPublishingPlugin.calculateUrlFromOrigin(origin) == uri
+        ReactiveSocketPublishingPlugin.calculateUrlFromOrigin(origin) == uri
 
         where:
         origin                                           | uri
@@ -19,7 +19,7 @@ class RxJavaPublishingPluginSpec extends Specification {
     }
     def 'testCalculateRepoFromOrigin'(String origin, String repo) {
         expect:
-        RxJavaPublishingPlugin.calculateRepoFromOrigin(origin) == repo
+        ReactiveSocketPublishingPlugin.calculateRepoFromOrigin(origin) == repo
 
         where:
         origin                                           | repo

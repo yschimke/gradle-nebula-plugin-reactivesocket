@@ -3,11 +3,11 @@ package nebula.plugin.reactivesocket
 import nebula.test.ProjectSpec
 import org.gradle.api.plugins.JavaPlugin
 
-class RxjavaLicensePluginSpec extends ProjectSpec {
+class ReactiveSocketLicensePluginSpec extends ProjectSpec {
     def 'lazily save file'() {
         when:
         project.plugins.apply(JavaPlugin)
-        project.plugins.apply(RxjavaLicensePlugin)
+        project.plugins.apply(ReactiveSocketLicensePlugin)
 
         then:
         def HEADER = new File(projectDir, 'build/license/HEADER')

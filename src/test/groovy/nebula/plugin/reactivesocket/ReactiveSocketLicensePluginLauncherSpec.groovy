@@ -2,11 +2,11 @@ package nebula.plugin.reactivesocket
 
 import nebula.test.IntegrationSpec
 
-class RxjavaLicensePluginLauncherSpec extends IntegrationSpec {
+class ReactiveSocketLicensePluginLauncherSpec extends IntegrationSpec {
     def 'lazily save file'() {
         buildFile << """
             apply plugin: 'java'
-            ${applyPlugin(RxjavaLicensePlugin)}
+            ${applyPlugin(ReactiveSocketLicensePlugin)}
         """.stripIndent()
 
         when:
@@ -21,7 +21,7 @@ class RxjavaLicensePluginLauncherSpec extends IntegrationSpec {
         file('LICENSE').text = "Free for all!!"
         buildFile << """
             apply plugin: 'java'
-            ${applyPlugin(RxjavaLicensePlugin)}
+            ${applyPlugin(ReactiveSocketLicensePlugin)}
             license {
                 header file('LICENSE')
             }
@@ -40,7 +40,7 @@ class RxjavaLicensePluginLauncherSpec extends IntegrationSpec {
         writeHelloWorld("nebula")
         buildFile << """
             apply plugin: 'java'
-            ${applyPlugin(RxjavaLicensePlugin)}
+            ${applyPlugin(ReactiveSocketLicensePlugin)}
         """.stripIndent()
 
         when:
@@ -55,7 +55,7 @@ class RxjavaLicensePluginLauncherSpec extends IntegrationSpec {
         File f = writeHelloWorld("nebula")
         buildFile << """
             apply plugin: 'java'
-            ${applyPlugin(RxjavaLicensePlugin)}
+            ${applyPlugin(ReactiveSocketLicensePlugin)}
         """.stripIndent()
 
         when:

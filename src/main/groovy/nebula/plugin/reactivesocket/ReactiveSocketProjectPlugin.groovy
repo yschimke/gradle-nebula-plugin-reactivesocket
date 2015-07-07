@@ -39,7 +39,7 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.plugins.ide.eclipse.EclipsePlugin
 import org.gradle.plugins.ide.idea.IdeaPlugin
 
-class RxjavaProjectPlugin implements Plugin<Project> {
+class ReactiveSocketProjectPlugin implements Plugin<Project> {
 
     Project project
 
@@ -77,7 +77,7 @@ class RxjavaProjectPlugin implements Plugin<Project> {
             project.description = project.name
         }
 
-        project.plugins.apply RxJavaReleasePlugin
+        project.plugins.apply ReactiveSocketReleasePlugin
 
         // Dummy tasks as the root level, instead of relying on pass-through
         if (projectType.isRootProject && !projectType.isLeafProject) {
@@ -93,7 +93,7 @@ class RxjavaProjectPlugin implements Plugin<Project> {
         }
 
         if (projectType.isLeafProject || projectType.isRootProject) {
-            project.plugins.apply(RxJavaPublishingPlugin)
+            project.plugins.apply(ReactiveSocketPublishingPlugin)
         }
 
         // Info, needed on all projects, so that the publishing can look at scm values
@@ -120,9 +120,9 @@ class RxjavaProjectPlugin implements Plugin<Project> {
             project.plugins.apply(NebulaOverridePlugin)
 
             // ReactiveX specific plugins
-            project.plugins.apply(RxjavaPerformancePlugin)
-            project.plugins.apply(RxjavaOsgiPlugin)
-            project.plugins.apply(RxjavaLicensePlugin)
+            project.plugins.apply(ReactiveSocketPerformancePlugin)
+            project.plugins.apply(ReactiveSocketOsgiPlugin)
+            project.plugins.apply(ReactiveSocketLicensePlugin)
 
             // Set Default java versions
             project.plugins.withType(JavaPlugin) {
@@ -153,13 +153,13 @@ class RxjavaProjectPlugin implements Plugin<Project> {
 
                     // TODO See why this was initially added.
                     // it.classpath = sourceSets.main.compileClasspath
-                    windowTitle = "RxJava Javadoc ${project.version}"
+                    windowTitle = "ReactiveSocket Javadoc ${project.version}"
 
                     if (JavaVersion.current().isJava8Compatible()) {
                         options.addStringOption('Xdoclint:none', '-quiet')
                     }
                 }
-                options.addStringOption('top').value = '<h2 class="title" style="padding-top:40px">RxJava</h2>'
+                options.addStringOption('top').value = '<h2 class="title" style="padding-top:40px">ReactiveSocket</h2>'
             }
 
             project.tasks.withType(Test) { Test testTask ->

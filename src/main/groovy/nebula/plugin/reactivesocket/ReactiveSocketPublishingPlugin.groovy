@@ -13,7 +13,7 @@ import org.gradle.api.publish.plugins.PublishingPlugin
 import org.gradle.api.tasks.Upload
 import org.jfrog.gradle.plugin.artifactory.task.BuildInfoBaseTask
 
-class RxJavaPublishingPlugin  implements Plugin<Project> {
+class ReactiveSocketPublishingPlugin  implements Plugin<Project> {
 
     Project project
 
@@ -37,7 +37,7 @@ class RxJavaPublishingPlugin  implements Plugin<Project> {
 
         // Configuring for us
         BintrayExtension bintray = project.extensions.getByType(BintrayExtension)
-        bintray.pkg.repo = 'RxJava'
+        bintray.pkg.repo = 'ReactiveSocket'
         bintray.pkg.userOrg = 'reactivex'
         bintray.pkg.licenses = ['Apache-2.0'] //TBD
         bintray.pkg.labels = ['rxjava', 'reactivex']

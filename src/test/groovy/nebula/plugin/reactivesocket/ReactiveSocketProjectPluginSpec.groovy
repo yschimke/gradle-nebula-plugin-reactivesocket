@@ -18,7 +18,7 @@ package nebula.plugin.reactivesocket
 import nebula.test.PluginProjectSpec
 import org.ajoberstar.grgit.Grgit
 
-class RxjavaProjectPluginSpec extends PluginProjectSpec {
+class ReactiveSocketProjectPluginSpec extends PluginProjectSpec {
     def setup() {
         // We require to be a git repo
         def originGit = Grgit.init(dir: projectDir)
@@ -29,7 +29,7 @@ class RxjavaProjectPluginSpec extends PluginProjectSpec {
 
     @Override
     String getPluginName() {
-        'rxjava-project'
+        'reactivesocket-project'
     }
 
 }
