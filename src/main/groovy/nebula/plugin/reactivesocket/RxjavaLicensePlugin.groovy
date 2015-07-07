@@ -1,4 +1,4 @@
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import nebula.core.GradleHelper
 import nebula.plugin.publishing.maven.NebulaBaseMavenPublishingPlugin
@@ -97,7 +97,7 @@ class RxjavaLicensePlugin  implements Plugin<Project> {
     }
 
     def copyHeaderFile() {
-        return ClasspathHelper.copyResource('reactivex/codequality/HEADER', header)
+        return ClasspathHelper.copyResource('reactivesocket/codequality/HEADER', header)
     }
 
 }

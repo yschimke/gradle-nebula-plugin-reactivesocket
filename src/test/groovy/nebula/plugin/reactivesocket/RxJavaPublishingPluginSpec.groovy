@@ -1,4 +1,4 @@
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import spock.lang.Specification
 

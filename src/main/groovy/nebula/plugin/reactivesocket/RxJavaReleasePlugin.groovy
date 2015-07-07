@@ -1,4 +1,4 @@
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import nebula.plugin.release.NetflixOssStrategies
 import nebula.plugin.release.OverrideStrategies

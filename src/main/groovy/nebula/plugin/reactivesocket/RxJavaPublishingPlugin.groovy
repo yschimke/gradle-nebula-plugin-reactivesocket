@@ -1,4 +1,4 @@
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import com.jfrog.bintray.gradle.BintrayExtension
 import com.jfrog.bintray.gradle.BintrayUploadTask

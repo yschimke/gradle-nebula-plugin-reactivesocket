@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import nebula.test.IntegrationSpec
 import org.ajoberstar.grgit.Grgit

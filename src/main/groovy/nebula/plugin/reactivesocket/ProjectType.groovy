@@ -1,4 +1,4 @@
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import groovy.transform.Canonical
 import org.gradle.api.Project

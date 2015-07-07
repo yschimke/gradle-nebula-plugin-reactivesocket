@@ -1,4 +1,4 @@
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import com.google.common.io.Files
 import nebula.plugin.publishing.maven.NebulaMavenPublishingPlugin

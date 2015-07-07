@@ -1,4 +1,4 @@
-package nebula.plugin.rxjavaproject
+package nebula.plugin.reactivesocket
 
 import nebula.test.ProjectSpec
 import org.gradle.api.plugins.JavaPlugin
