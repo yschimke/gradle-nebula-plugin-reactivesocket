@@ -38,9 +38,9 @@ class ReactiveSocketPublishingPlugin  implements Plugin<Project> {
         // Configuring for us
         BintrayExtension bintray = project.extensions.getByType(BintrayExtension)
         bintray.pkg.repo = 'ReactiveSocket'
-        bintray.pkg.userOrg = 'reactivex'
+        bintray.pkg.userOrg = 'reactivesocket'
         bintray.pkg.licenses = ['Apache-2.0'] //TBD
-        bintray.pkg.labels = ['rxjava', 'reactivex']
+        bintray.pkg.labels = ['reactivesocket']
 
         BintrayUploadTask bintrayUpload = (BintrayUploadTask) project.tasks.find { it instanceof BintrayUploadTask }
         bintrayUpload.doFirst {
@@ -49,7 +49,7 @@ class ReactiveSocketPublishingPlugin  implements Plugin<Project> {
             // We have to change the task directly, since they already copied from the extension in an afterEvaluate
 
             if (scmInfo) {
-                // Assuming scmInfo.origin is something like git@github.com:reactivex/rxjava-core.git
+                // Assuming scmInfo.origin is something like git@github.com:reactivex/rxjava.git
                 bintrayUpload.packageName = calculateRepoFromOrigin(scmInfo.origin) ?: project.rootProject.name
 
                 def url = calculateUrlFromOrigin(scmInfo.origin)

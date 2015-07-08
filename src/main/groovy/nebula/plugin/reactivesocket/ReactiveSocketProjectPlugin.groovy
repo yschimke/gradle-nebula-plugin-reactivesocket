@@ -71,7 +71,7 @@ class ReactiveSocketProjectPlugin implements Plugin<Project> {
 
             // Default Group
             def gradleHelper = new GradleHelper((AbstractProject) project)
-            gradleHelper.addDefaultGroup('io.reactivex')
+            gradleHelper.addDefaultGroup('io.reactivesocket')
 
             // Default description, a user would just specify it after applying our plugin
             project.description = project.name
@@ -133,26 +133,15 @@ class ReactiveSocketProjectPlugin implements Plugin<Project> {
                 }
 
                 JavaPluginConvention convention = project.convention.getPlugin(JavaPluginConvention)
-                convention.sourceCompatibility = JavaVersion.VERSION_1_6
-                //convention.targetCompatibility = JavaVersion.VERSION_1_6
+                convention.sourceCompatibility = JavaVersion.VERSION_1_8
+                //convention.targetCompatibility = JavaVersion.VERSION_1_8
             }
 
             // TODO Publish javadoc back to Github for hosting
             project.tasks.withType(Javadoc) {
                 failOnError = false
-                // we do not want the org.rx.operations package include
-                exclude '**/operations/**'
 
                 options {
-                    // TODO Publish Doclet to global location
-                    // doclet = "org.benjchristensen.doclet.DocletExclude"
-                    // docletpath = [rootProject.file('./gradle/doclet-exclude.jar')]
-
-                    // TODO Embed stylesheet into .jar
-                    // stylesheetFile = rootProject.file('./gradle/javadocStyleSheet.css')
-
-                    // TODO See why this was initially added.
-                    // it.classpath = sourceSets.main.compileClasspath
                     windowTitle = "ReactiveSocket Javadoc ${project.version}"
 
                     if (JavaVersion.current().isJava8Compatible()) {

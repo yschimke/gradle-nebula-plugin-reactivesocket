@@ -26,18 +26,11 @@ class ReactiveSocketOsgiPlugin implements Plugin<Project> {
                     OsgiManifest manifest = (OsgiManifest) delegate
 
                     manifest.name = project.name
-                    manifest.instruction 'Bundle-Vendor', 'ReactiveX'
-                    manifest.instruction 'Bundle-DocURL', 'https://github.com/ReactiveX/ReactiveSocket'
+                    manifest.instruction 'Bundle-Vendor', 'ReactiveSocket'
+                    manifest.instruction 'Bundle-DocURL', 'https://github.com/ReactiveSocket'
 
                     // Legacy from what we had test in the compile classpath
                     manifest.instruction 'Import-Package', '!org.junit,!junit.framework,!org.mockito.*,*'
-
-                    // rxjava-core needs this:
-                    // instruction 'Eclipse-ExtensibleAPI', 'true'
-
-                    // Everyone by rxjava-core needs this to be added to the rxjava-core bundle:
-                    //instruction 'Fragment-Host', 'com.netflix.rxjava.core'
-                    // TODO Find way to add this to all, but exclude rxjava-core
                 }
             }
         }
