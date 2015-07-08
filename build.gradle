@@ -60,13 +60,3 @@ test {
     maxHeapSize = "512m"
     jvmArgs "-XX:MaxPermSize=512m"
 }
-
-// support for snapshot/final releases with the various branches RxJava uses
-nebulaRelease {
-    addReleaseBranchPattern(/\d+\.\d+\.\d+/)
-    addReleaseBranchPattern('HEAD')
-}
-
-if (project.hasProperty('release.useLastTag')) {
-    tasks.prepare.enabled = false
-}
