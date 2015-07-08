@@ -1,6 +1,6 @@
 language: groovy
 jdk:
-- oraclejdk7
+- oraclejdk8
 sudo: false
 
 # script for build and release via Travis to Bintray
