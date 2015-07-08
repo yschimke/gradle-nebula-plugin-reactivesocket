@@ -15,6 +15,10 @@ primary responsibilities to:
 This project could be used as an example of how a "project plugin" could work. A "project plugin" is a Gradle that 
 provides consistency across many projects, e.g. in a Github org or an enterprise.
 
+# Build & Binaries
+
+<a href='https://travis-ci.org/ReactiveSocket/gradle-nebula-plugin-reactivesocket'><img src='https://travis-ci.org/ReactiveSocket/gradle-nebula-plugin-reactivesocket.svg?branch=gradle-2.2'></a>
+
 # Plugins Used
 
 For reference, these are Gradle-related modules used:
