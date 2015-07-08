@@ -17,6 +17,29 @@ contacts {
     }
 }
 
+bintray {
+  publish = true
+  dryRun = true
+  pkg {
+    repo = 'gradle-nebula-plugin-reactivesocket'
+    userOrg = 'reactivesocket'
+    name = 'project.name'
+    desc = project.description
+    websiteUrl = 'https://github.com/ReactiveSocket/${project.name}'
+    issueTrackerUrl = 'https://github.com/ReactiveSocket/${project.name}/issues'
+    vcsUrl = 'https://github.com/ReactiveSocket/${project.name}.git'
+    licenses = ['Apache-2.0']
+    labels = ['reactivesocket', 'ReactiveSocket']
+    publicDownloadNumbers = true
+    attributes = [:]
+    version {
+      name = project.version
+      vcsTag = project.version
+      attributes = [:]
+    }
+  }
+}
+
 dependencies {
     compile 'com.netflix.nebula:nebula-project-plugin:2.+'
     compile 'com.netflix.nebula:nebula-bintray-plugin:2.+' // for publishing
