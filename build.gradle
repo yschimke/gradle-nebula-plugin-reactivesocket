@@ -19,11 +19,11 @@ contacts {
 
 bintray {
   publish = true
-  dryRun = true
+  dryRun = false
   pkg {
-    repo = 'gradle-nebula-plugin-reactivesocket'
+    repo = 'ReactiveSocket'
     userOrg = 'reactivesocket'
-    name = 'project.name'
+    name = project.name
     desc = project.description
     websiteUrl = 'https://github.com/ReactiveSocket/${project.name}'
     issueTrackerUrl = 'https://github.com/ReactiveSocket/${project.name}/issues'
