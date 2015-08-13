@@ -31,8 +31,8 @@ class ReactiveSocketPerformancePlugin implements Plugin<Project> {
             facetPlugin.extension.create('perf')
 
             project.dependencies {
-                perfCompile 'org.openjdk.jmh:jmh-core:0.9'
-                perfCompile 'org.openjdk.jmh:jmh-generator-annprocess:0.9'
+                perfCompile 'org.openjdk.jmh:jmh-core:1.10.3'
+                perfCompile 'org.openjdk.jmh:jmh-generator-annprocess:1.10.3'
             }
 
             project.plugins.withType(JavaBasePlugin) {
