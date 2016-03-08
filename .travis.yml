@@ -3,6 +3,9 @@ jdk:
 - oraclejdk8
 sudo: false
 
+install: "./installViaTravis.sh"
+script: "./buildViaTravis.sh"
+
 # cache between builds
 cache:
   directories:
