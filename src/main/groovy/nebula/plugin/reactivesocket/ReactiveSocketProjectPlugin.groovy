@@ -58,9 +58,9 @@ class ReactiveSocketProjectPlugin implements Plugin<Project> {
             // Contacts
             ContactsPlugin contactsPlugin = project.plugins.apply(ContactsPlugin)
             project.contacts {
-                'benjchristensen@netflix.com' {
-                    github 'benjchristensen'
-                    moniker 'Ben Christensen'
+                'netflixoss@netflix.com' {
+                    github 'netflixgithub'
+                    moniker 'Netflix Open Source Development'
                 }
             }
 
@@ -108,9 +108,6 @@ class ReactiveSocketProjectPlugin implements Plugin<Project> {
             project.plugins.apply(MavenScmPlugin)
             project.plugins.apply(JavadocJarPlugin)
             project.plugins.apply(SourceJarPlugin)
-
-            // Contacts
-            project.plugins.apply(ContactsPlugin) // will inherit from parent projects
 
             // Dependency Locking
             project.plugins.apply(DependencyLockPlugin)

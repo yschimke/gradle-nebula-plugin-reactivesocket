@@ -78,7 +78,7 @@ class ReactiveSocketProjectPluginLauncherSpec extends IntegrationSpec {
         fileExists("build/libs/stand-it-all-up-${snapshotVer}.jar")
 
         def manifest = getManifest("build/libs/stand-it-all-up-${snapshotVer}.jar")
-        manifest['Module-Email'] == 'benjchristensen@netflix.com'
+        manifest['Module-Email'] == 'netflixoss@netflix.com'
 
         result.wasExecuted(':compileExamplesJava')
         fileExists('build/classes/examples/Example.class')
