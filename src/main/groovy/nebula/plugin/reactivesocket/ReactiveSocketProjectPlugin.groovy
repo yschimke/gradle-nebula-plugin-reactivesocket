@@ -53,15 +53,9 @@ class ReactiveSocketProjectPlugin implements Plugin<Project> {
 
         if (projectType.isLeafProject || projectType.isRootProject) {
             // Repositories
-            project.repositories.jcenter()
-
-            // Contacts
-            ContactsPlugin contactsPlugin = project.plugins.apply(ContactsPlugin)
-            project.contacts {
-                'benjchristensen@netflix.com' {
-                    github 'benjchristensen'
-                    moniker 'Ben Christensen'
-                }
+            project.repositories {
+                jcenter()
+                maven { url 'https://dl.bintray.com/reactivesocket/ReactiveSocket' }
             }
 
             // IDE Support
@@ -110,7 +104,13 @@ class ReactiveSocketProjectPlugin implements Plugin<Project> {
             project.plugins.apply(SourceJarPlugin)
 
             // Contacts
-            project.plugins.apply(ContactsPlugin) // will inherit from parent projects
+            project.plugins.apply(ContactsPlugin)
+            project.contacts {
+                'netflixoss@netflix.com' {
+                    github 'netflixgithub'
+                    moniker 'Netflix Open Source Development'
+                }
+            }
 
             // Dependency Locking
             project.plugins.apply(DependencyLockPlugin)
